@@ -69,7 +69,8 @@
   .couples-inner{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
   .couples-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:40px;box-shadow:var(--shadow)}
   .couples-card h2{font-size:1.9rem;margin-bottom:14px}
-  .couples-card .price-tag{display:inline-block;background:var(--cream);color:var(--gold-dark);font-weight:700;padding:6px 16px;border-radius:50px;margin:8px 0 16px;border:1px solid var(--line)}
+  .couples-card .price-tag{display:inline-block;background:var(--cream);color:var(--gold-dark);font-weight:700;padding:6px 16px;border-radius:50px;margin:8px 8px 8px 0;border:1px solid var(--line)}
+  .couples-card .price-tag:last-of-type{margin-bottom:16px}
   .couples-visual{background:linear-gradient(135deg,#f3e6cd,#faf2e3);border-radius:18px;min-height:300px;display:flex;align-items:center;justify-content:center;color:var(--gold-dark);text-align:center;padding:30px;box-shadow:var(--shadow);border:1px solid var(--line)}
   .couples-visual span{font-family:Georgia,serif;font-size:1.5rem;line-height:1.4}
 
@@ -184,7 +185,7 @@
       {"@type":"Offer","price":"250","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Supreme Power","description":"Cel mai puternic masaj de 60 de minute, cu lucru din antebraț și coate pe spate, umeri și picioare."}},
       {"@type":"Offer","price":"300","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj Beduin","description":"90 de minute cu 6 stiluri diferite de masaj într-o singură ședință, de la mișcări lungi la presiune profundă și pietre calde."}},
       {"@type":"Offer","price":"600","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"7 Chakra","description":"Trei ore de lucru pe cele șapte centre energetice, cu uleiuri dedicate, pietre calde și respirație ghidată. Doar cu Sara, pe bază de programare."}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Masaj pentru Cupluri","description":"Doi terapeuți lucrează simultan, în aceeași cameră. Două persoane sunt tratate în același timp, fiecare cu masajul potrivit pentru ea.","url":"https://masajbrasovnefertiti.com/servicii/masaj-pentru-cupluri/"}}
+      {"@type":"Offer","price":"200","priceCurrency":"RON","description":"Preț de persoană, pentru 60 de minute de masaj de relaxare sau terapeutic.","itemOffered":{"@type":"Service","name":"Masaj pentru Cupluri","description":"Doi terapeuți lucrează simultan, în aceeași cameră. Două persoane sunt tratate în același timp, fiecare cu masajul potrivit pentru ea.","url":"https://masajbrasovnefertiti.com/servicii/masaj-pentru-cupluri/"}}
     ]
   },
   "sameAs":[]
@@ -202,7 +203,7 @@
     {"@type":"Question","name":"Unde sunteți și cum ajung la voi?","acceptedAnswer":{"@type":"Answer","text":"Ne găsiți pe Strada Codrii Cosminului 40, în Brașov. Există loc de parcare pe stradă, în fața clădirii."}},
     {"@type":"Question","name":"Ce masaj să aleg dacă am dureri de spate sau de cervicală?","acceptedAnswer":{"@type":"Answer","text":"Masajul terapeutic de 60 de minute este cel potrivit, pentru că se lucrează punctual pe contracturi. Dacă vrei și relaxare pe lângă asta, alege Masajul Combinat. Pentru tensiune foarte veche și blocaje puternice, recomandăm Supreme Power."}},
     {"@type":"Question","name":"Ce metode de plată acceptați?","acceptedAnswer":{"@type":"Answer","text":"Acceptăm cash, plată prin Revolut și transfer bancar. Voucherele cadou pot fi cumpărate la sediu sau plătite online prin Revolut ori transfer bancar."}},
-    {"@type":"Question","name":"Oferiți masaj pentru cupluri?","acceptedAnswer":{"@type":"Answer","text":"Da, și este cel mai cerut serviciu al nostru. Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp, fiecare cu tipul de masaj preferat."}},
+    {"@type":"Question","name":"Oferiți masaj pentru cupluri și cât costă?","acceptedAnswer":{"@type":"Answer","text":"Da, și este cel mai cerut serviciu al nostru. Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp, fiecare cu tipul de masaj preferat. Costă 200 lei de persoană pentru 60 de minute de masaj de relaxare sau terapeutic, adică 400 lei în total pentru două persoane."}},
     {"@type":"Question","name":"Este prima mea ședință de masaj. La ce să mă aștept?","acceptedAnswer":{"@type":"Answer","text":"Vino cu 5 minute mai devreme. Terapeutul te întreabă întâi ce te doare și ce presiune preferi, apoi te lasă singur în cameră ca să te pregătești. Pe parcursul ședinței poți cere oricând mai multă sau mai puțină presiune. Toate ședințele includ uleiuri naturale, pietre calde și muzică liniștită."}}
   ]
 }
@@ -246,6 +247,7 @@
       <div class="eyebrow" style="text-align:left">Cel mai cerut serviciu</div>
       <h2>Masaj pentru cupluri</h2>
       <p>Singurul loc din Brașov unde <strong>doi terapeuți lucrează simultan, în aceeași cameră</strong>. Două persoane sunt tratate în același timp, fiecare cu tipul de masaj potrivit pentru ea: relaxare, terapeutic sau sportiv.</p>
+      <span class="price-tag">200 lei de persoană / 60 min</span>
       <span class="price-tag">Disponibil și ca voucher cadou</span>
       <p><a href="/servicii/masaj-pentru-cupluri/" class="btn" style="margin-top:8px">Detalii masaj în cuplu →</a></p>
     </div>
@@ -498,8 +500,8 @@
       <details class="card">
         <summary>
           <h3>Masaj pentru Cupluri</h3>
-          <div class="price">Doi terapeuți, aceeași cameră</div>
-          <p>Două persoane tratate în același timp, fiecare cu masajul potrivit pentru ea.</p>
+          <div class="price">200 lei de persoană / 60 min</div>
+          <p>Doi terapeuți, aceeași cameră. Două persoane tratate în același timp, fiecare cu masajul potrivit pentru ea.</p>
           <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
         </summary>
         <div class="card-body">
@@ -507,6 +509,7 @@
           <ul>
             <li><b>Ideal pentru</b> parteneri, prieteni sau mamă și fiică.</li>
             <li><b>Cuprinde:</b> fiecare alege relaxare, terapeutic sau sportiv.</li>
+            <li><b>Preț:</b> 200 lei de persoană pentru relaxare sau terapeutic, adică 400 lei în total. Dacă unul alege altceva, se adaugă doar diferența.</li>
             <li><b>Cadou:</b> disponibil ca voucher personalizat.</li>
           </ul>
           <a href="/servicii/masaj-pentru-cupluri/" class="mini-cta">Vezi pagina masajului în cuplu →</a>
@@ -571,8 +574,8 @@
         <p>Acceptăm cash, plată prin Revolut și transfer bancar. Voucherele cadou se pot cumpăra la sediu sau plăti online prin Revolut ori transfer bancar.</p>
       </details>
       <details>
-        <summary>Oferiți masaj pentru cupluri?</summary>
-        <p>Da, și este cel mai cerut serviciu al nostru. Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp, fiecare cu tipul de masaj preferat. <a href="/servicii/masaj-pentru-cupluri/">Vezi pagina masajului în cuplu</a>.</p>
+        <summary>Oferiți masaj pentru cupluri și cât costă?</summary>
+        <p>Da, și este cel mai cerut serviciu al nostru. Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp, fiecare cu tipul de masaj preferat. Costă 200 lei de persoană pentru 60 de minute de relaxare sau terapeutic, adică 400 lei în total. <a href="/servicii/masaj-pentru-cupluri/">Vezi pagina masajului în cuplu</a>.</p>
       </details>
       <details>
         <summary>Este prima mea ședință de masaj. La ce să mă aștept?</summary>
