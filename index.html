@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nefertiti Therapy – Masaj în Brașov | Deschis zilnic 11:00–21:00, și în weekend</title>
-<meta name="description" content="Centru de masaj în Brașov cu peste 200 de recenzii pe Google. Masaj de relaxare, terapeutic, pentru cupluri (doi terapeuți în aceeași cameră), reflexoterapie și pachete premium. Strada Codrii Cosminului 40. Programări: 0770 692 621.">
+<title>Masaj Brașov | Nefertiti Therapy – Prețuri, Servicii și Programări</title>
+<meta name="description" content="Masaj în Brașov cu peste 200 de recenzii pe Google. Relaxare, terapeutic, sportiv, gravide, reflexoterapie și masaj pentru cupluri cu doi terapeuți în aceeași cameră. Prețuri de la 200 lei. Deschis zilnic 11:00–21:00. Programări: 0770 692 621.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://masajbrasovnefertiti.com/">
 <meta name="theme-color" content="#7a5c2e">
@@ -13,8 +13,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:site_name" content="Nefertiti Therapy">
-<meta property="og:title" content="Nefertiti Therapy – Masaj în Brașov | Peste 200 de recenzii">
-<meta property="og:description" content="Masaj de relaxare, terapeutic și pentru cupluri în Brașov. Deschis zilnic 11:00–21:00, și în weekend. Programări: 0770 692 621.">
+<meta property="og:title" content="Masaj Brașov – Nefertiti Therapy | Peste 200 de recenzii">
+<meta property="og:description" content="Masaj de relaxare, terapeutic și pentru cupluri în Brașov. Prețuri de la 200 lei. Deschis zilnic 11:00–21:00, și în weekend. Programări: 0770 692 621.">
 <meta property="og:url" content="https://masajbrasovnefertiti.com/">
 
 <style>
@@ -74,12 +74,39 @@
   .couples-visual span{font-family:Georgia,serif;font-size:1.5rem;line-height:1.4}
 
   /* Services grid */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow);transition:.2s}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
   .card:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(70,55,30,.13)}
+  .card[open]{transform:none;box-shadow:0 16px 38px rgba(70,55,30,.13)}
+  .card>summary{padding:26px;cursor:pointer;list-style:none;display:block}
+  .card>summary::-webkit-details-marker{display:none}
+  .card>summary:focus-visible{outline:2px solid var(--gold);outline-offset:-4px;border-radius:16px}
   .card h3{font-size:1.18rem;margin-bottom:8px}
-  .card .price{color:var(--gold);font-weight:700;font-size:1.05rem;margin-bottom:10px}
+  .card .price{color:var(--gold);font-weight:700;font-size:1.05rem;margin-bottom:10px;font-variant-numeric:tabular-nums}
   .card p{color:var(--muted);font-size:.95rem}
+  .card .more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--gold-dark);font-weight:600;font-size:.9rem}
+  .card .chev{display:inline-block;transition:transform .2s;font-size:.8rem}
+  .card[open] .chev{transform:rotate(180deg)}
+  .card .lbl-less{display:none}
+  .card[open] .lbl-more{display:none}
+  .card[open] .lbl-less{display:inline}
+  .card-body{padding:22px 26px 26px;border-top:1px solid var(--line);background:linear-gradient(180deg,#fdfaf5,#fff)}
+  .card-body p{color:#42392e;font-size:.95rem;margin-bottom:12px}
+  .card-body ul{list-style:none;margin:0 0 14px}
+  .card-body ul li{position:relative;padding:6px 0 6px 20px;font-size:.92rem;color:var(--muted)}
+  .card-body ul li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+  .card-body ul li b{color:var(--ink);font-weight:600}
+  .mini-cta{display:inline-block;background:var(--cream);color:var(--gold-dark);border:1px solid var(--line);padding:9px 18px;border-radius:50px;font-weight:600;font-size:.9rem}
+  .mini-cta:hover{background:var(--gold-dark);color:#fff;border-color:var(--gold-dark)}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:0 auto}
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+  .faq summary{font-weight:600;color:var(--gold-dark);cursor:pointer;padding:15px 0;font-size:1.02rem;list-style:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"+";color:var(--gold);font-weight:700;margin-right:10px}
+  .faq details[open] summary::before{content:"–"}
+  .faq details p{padding:0 0 16px 24px;color:#42392e;font-size:.95rem}
 
   /* Info strip */
   .info{background:var(--gold-dark);color:#fff}
@@ -138,8 +165,46 @@
     "opens":"11:00","closes":"21:00"
   }],
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"200"},
-  "areaServed":"Brașov",
+  "areaServed":{"@type":"City","name":"Brașov"},
+  "currenciesAccepted":"RON",
+  "paymentAccepted":"Cash, Revolut, transfer bancar",
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Servicii de masaj Brașov",
+    "itemListElement":[
+      {"@type":"Offer","price":"200","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj Combinat","description":"Masaj de relaxare, lucru terapeutic pe zonele încordate și reflexoterapie plantară, cu două feluri de pietre calde și uleiuri 100% naturale. 60 de minute."}},
+      {"@type":"Offer","price":"200","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj de Relaxare","description":"Masaj lent pe corp întreg, cu mișcări lungi și continue, pietre calde și ulei cald natural. Pentru stres și somn odihnitor. 60 de minute."}},
+      {"@type":"Offer","price":"200","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj Terapeutic","description":"Lucru punctual pe contracturi și puncte declanșatoare în zona cervicală, umeri și lombară. Pentru dureri musculare și de spate. 60 de minute."}},
+      {"@type":"Offer","price":"200","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Reflexoterapie","description":"O oră dedicată tălpilor și gambelor, cu lucru pe punctele reflexogene, baie caldă de picioare și masaj de gambe."}},
+      {"@type":"Offer","price":"200","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj Anticelulitic","description":"Masaj mecanic intens pe coapse, fese și abdomen, combinat cu aparatură de vacuum, pentru stimularea circulației. 60 de minute."}},
+      {"@type":"Offer","price":"200","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj pentru Gravide","description":"Masaj prenatal blând, realizat de o terapeută specializată, cu poziționare laterală și perne de sprijin. 60 de minute."}},
+      {"@type":"Offer","price":"250","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj Sportiv Profund","description":"Masaj profund pe grupele musculare solicitate de antrenament, cu presiune susținută și întinderi asistate. 60 de minute."}},
+      {"@type":"Offer","price":"225","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Deep Relaxing","description":"Relaxare profundă pe corp întreg cu 3 feluri de pietre calde, uleiuri speciale și reflexoterapie. 70 de minute."}},
+      {"@type":"Offer","price":"300","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Supreme: Pachet Renaștere","description":"Ședința completă de 90 de minute: relaxare pe corp întreg, terapie profundă, manevre lente de drenaj și 3 feluri de pietre calde."}},
+      {"@type":"Offer","price":"250","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Supreme Power","description":"Cel mai puternic masaj de 60 de minute, cu lucru din antebraț și coate pe spate, umeri și picioare."}},
+      {"@type":"Offer","price":"300","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"Masaj Beduin","description":"90 de minute cu 6 stiluri diferite de masaj într-o singură ședință, de la mișcări lungi la presiune profundă și pietre calde."}},
+      {"@type":"Offer","price":"600","priceCurrency":"RON","itemOffered":{"@type":"Service","name":"7 Chakra","description":"Trei ore de lucru pe cele șapte centre energetice, cu uleiuri dedicate, pietre calde și respirație ghidată. Doar cu Sara, pe bază de programare."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Masaj pentru Cupluri","description":"Doi terapeuți lucrează simultan, în aceeași cameră. Două persoane sunt tratate în același timp, fiecare cu masajul potrivit pentru ea.","url":"https://masajbrasovnefertiti.com/servicii/masaj-pentru-cupluri/"}}
+    ]
+  },
   "sameAs":[]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Cât costă un masaj în Brașov la Nefertiti Therapy?","acceptedAnswer":{"@type":"Answer","text":"Ședințele individuale de 60 de minute pornesc de la 200 lei. Masajul sportiv profund și Supreme Power costă 250 lei, Deep Relaxing 225 lei pentru 70 de minute, iar pachetele lungi de 90 de minute (Supreme: Pachet Renaștere și Masaj Beduin) costă 300 lei. Ședința de 7 Chakra, de 180 de minute, costă 600 lei."}},
+    {"@type":"Question","name":"Trebuie să fac programare sau pot veni direct?","acceptedAnswer":{"@type":"Answer","text":"Recomandăm programarea telefonică la 0770 692 621, pentru că lucrăm pe intervale fixe și de multe ori suntem plini. Dacă avem o fereastră liberă în ziua respectivă, vă primim și fără programare."}},
+    {"@type":"Question","name":"Care sunt orele de program?","acceptedAnswer":{"@type":"Answer","text":"Suntem deschiși zilnic între 11:00 și 21:00, inclusiv sâmbăta și duminica. Ultima ședință de 60 de minute începe la ora 20:00."}},
+    {"@type":"Question","name":"Unde sunteți și cum ajung la voi?","acceptedAnswer":{"@type":"Answer","text":"Ne găsiți pe Strada Codrii Cosminului 40, în Brașov. Există loc de parcare pe stradă, în fața clădirii."}},
+    {"@type":"Question","name":"Ce masaj să aleg dacă am dureri de spate sau de cervicală?","acceptedAnswer":{"@type":"Answer","text":"Masajul terapeutic de 60 de minute este cel potrivit, pentru că se lucrează punctual pe contracturi. Dacă vrei și relaxare pe lângă asta, alege Masajul Combinat. Pentru tensiune foarte veche și blocaje puternice, recomandăm Supreme Power."}},
+    {"@type":"Question","name":"Ce metode de plată acceptați?","acceptedAnswer":{"@type":"Answer","text":"Acceptăm cash, plată prin Revolut și transfer bancar. Voucherele cadou pot fi cumpărate la sediu sau plătite online prin Revolut ori transfer bancar."}},
+    {"@type":"Question","name":"Oferiți masaj pentru cupluri?","acceptedAnswer":{"@type":"Answer","text":"Da, și este cel mai cerut serviciu al nostru. Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp, fiecare cu tipul de masaj preferat."}},
+    {"@type":"Question","name":"Este prima mea ședință de masaj. La ce să mă aștept?","acceptedAnswer":{"@type":"Answer","text":"Vino cu 5 minute mai devreme. Terapeutul te întreabă întâi ce te doare și ce presiune preferi, apoi te lasă singur în cameră ca să te pregătești. Pe parcursul ședinței poți cere oricând mai multă sau mai puțină presiune. Toate ședințele includ uleiuri naturale, pietre calde și muzică liniștită."}}
+  ]
 }
 </script>
 </head>
@@ -151,7 +216,9 @@
     <nav class="nav-links">
       <a href="#servicii">Servicii</a>
       <a href="/servicii/masaj-pentru-cupluri/">Masaj în cuplu</a>
+      <a href="/preturi/">Prețuri</a>
       <a href="#vouchere">Vouchere</a>
+      <a href="#intrebari">Întrebări</a>
       <a href="#contact">Contact</a>
       <a href="tel:+40770692621" class="nav-call">📞 0770 692 621</a>
     </nav>
@@ -191,20 +258,261 @@
   <div class="wrap">
     <div class="eyebrow">Serviciile noastre</div>
     <h2 class="sec-title">Masaj pentru fiecare nevoie</h2>
-    <p class="sec-intro">Toate ședințele includ uleiuri naturale, pietre calde, atmosferă caldă și muzică relaxantă. Prețuri pentru ședințe individuale.</p>
+    <p class="sec-intro">Toate ședințele includ uleiuri naturale, pietre calde, atmosferă caldă și muzică relaxantă. Apasă pe orice serviciu ca să vezi ce cuprinde. Prețuri pentru ședințe individuale.</p>
     <div class="grid">
-      <div class="card"><h3>Masaj Combinat</h3><div class="price">200 lei / 60 min</div><p>Relaxare + terapeutic + reflexoterapie, cu două feluri de pietre calde și uleiuri 100% naturale.</p></div>
-      <div class="card"><h3>Masaj de Relaxare</h3><div class="price">200 lei / 60 min</div><p>Relaxare profundă cu pietre calde și ulei special, exact ce ai nevoie pentru a te deconecta.</p></div>
-      <div class="card"><h3>Masaj Terapeutic</h3><div class="price">200 lei / 60 min</div><p>Pentru durerile musculare și cervicale. Știm ce trebuie făcut, cu rezultate rapide.</p></div>
-      <div class="card"><h3>Reflexoterapie</h3><div class="price">200 lei / 60 min</div><p>Stimularea punctelor de pe tălpi pentru echilibrul și bunăstarea întregului corp.</p></div>
-      <div class="card"><h3>Masaj Anticelulitic</h3><div class="price">200 lei / 60 min</div><p>Tehnici speciale și aparatură pentru remodelarea corporală.</p></div>
-      <div class="card"><h3>Masaj pentru Gravide</h3><div class="price">200 lei / 60 min</div><p>Realizat de o specialistă în masajul prenatal. Bine ați venit!</p></div>
-      <div class="card"><h3>Masaj Sportiv Profund</h3><div class="price">250 lei / 60 min</div><p>Pentru sportivi și recuperare musculară intensă.</p></div>
-      <div class="card"><h3>Deep Relaxing</h3><div class="price">225 lei / 70 min</div><p>Relaxare profundă + 3 feluri de pietre calde + reflexoterapie și uleiuri speciale.</p></div>
-      <div class="card"><h3>Supreme: Pachet Renaștere</h3><div class="price">270 lei / 90 min</div><p>Relaxare + terapie profundă + 3 feluri de pietre calde + terapie pentru sistemul imunitar.</p></div>
-      <div class="card"><h3>Supreme Power</h3><div class="price">250 lei / 60 min</div><p>Masaj extrem de puternic pentru eliberarea completă a tensiunii.</p></div>
-      <div class="card"><h3>Masaj Beduin</h3><div class="price">300 lei / 90 min</div><p>O tehnică deosebită cu 6 stiluri diferite într-o singură ședință. Vei fi ca o persoană nouă.</p></div>
-      <div class="card"><h3>7 Chakra <span style="font-weight:400;font-size:.8rem;color:var(--muted)">(doar cu Sara)</span></h3><div class="price">600 lei / 180 min</div><p>Doar pentru cine știe… doar pentru cine vrea să afle.</p></div>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj Combinat</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Relaxare + terapeutic + reflexoterapie, cu două feluri de pietre calde și uleiuri 100% naturale.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Cel mai ales masaj din meniul nostru, pentru că le combină pe cele bune. Terapeutul începe cu mișcări lente de relaxare, trece apoi la lucrul pe zonele încordate (gât, umeri, zona lombară) și încheie cu reflexoterapie pe tălpi. Pietrele calde se folosesc pe parcurs, pentru ca mușchii să cedeze mai ușor.</p>
+          <ul>
+            <li><b>Ideal dacă</b> vrei și relaxare, și scăpare de tensiune, dar nu știi ce să alegi.</li>
+            <li><b>Cuprinde:</b> masaj de relaxare, lucru terapeutic pe zonele dureroase, reflexoterapie plantară.</li>
+            <li><b>Include:</b> două feluri de pietre calde și uleiuri 100% naturale.</li>
+            <li><b>Presiune:</b> medie, ajustată după cum ceri pe parcurs.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj de Relaxare</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Relaxare profundă cu pietre calde și ulei special, exact ce ai nevoie pentru a te deconecta.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Un masaj lent, cu mișcări lungi și continue pe tot corpul, gândit ca să îți liniștească sistemul nervos, nu ca să lucreze în forță. Lumina scăzută, muzică liniștită și pietre calde care încălzesc spatele. Mulți clienți adorm pe parcurs, ceea ce e un semn bun.</p>
+          <ul>
+            <li><b>Ideal dacă</b> ești stresat, dormi prost sau vii după o săptămână grea.</li>
+            <li><b>Cuprinde:</b> spate, picioare, brațe, ceafă și scalp.</li>
+            <li><b>Include:</b> pietre calde și ulei cald, 100% natural.</li>
+            <li><b>Presiune:</b> blândă spre medie.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/masaj-de-relaxare/" class="mini-cta" style="margin-left:6px">Masaj de relaxare în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj Terapeutic</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Pentru durerile musculare și cervicale. Știm ce trebuie făcut, cu rezultate rapide.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Aici nu venim să te adormim, ci să rezolvăm o problemă. Terapeutul te întreabă întâi unde doare și de cât timp, apoi lucrează punctual pe contracturi și pe punctele declanșatoare din zona cervicală, umeri și lombară. Se poate simți intens pe moment, dar zona rămâne mult mai liberă după.</p>
+          <ul>
+            <li><b>Ideal dacă</b> ai gâtul înțepenit, dureri lombare sau stai zilnic la birou.</li>
+            <li><b>Cuprinde:</b> evaluarea zonei, lucru pe contracturi, întinderi ușoare la final.</li>
+            <li><b>Include:</b> pietre calde pentru încălzirea mușchiului înainte de lucru.</li>
+            <li><b>Presiune:</b> fermă, dar oprim oricând spui.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/masaj-terapeutic/" class="mini-cta" style="margin-left:6px">Masaj terapeutic în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Reflexoterapie</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Stimularea punctelor de pe tălpi pentru echilibrul și bunăstarea întregului corp.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>O oră întreagă dedicată tălpilor și gambelor. Terapeutul lucrează pe punctele reflexogene cu presiune controlată, degete și articulații, după o hartă clasică a piciorului. Începe cu o baie caldă de picioare și se încheie cu masaj de gambe. Rămâi îmbrăcat, se descoperă doar picioarele.</p>
+          <ul>
+            <li><b>Ideal dacă</b> stai mult în picioare, ai picioare grele sau umflate seara.</li>
+            <li><b>Cuprinde:</b> pregătire caldă, lucru pe punctele de pe tălpi, masaj de gambe.</li>
+            <li><b>Bun de știut:</b> primele minute pot fi sensibile, apoi devine plăcut.</li>
+            <li><b>Presiune:</b> punctuală, reglabilă.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/reflexoterapie/" class="mini-cta" style="margin-left:6px">Reflexoterapie în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj Anticelulitic</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Tehnici speciale și aparatură pentru remodelarea corporală.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Masaj mecanic intens pe coapse, fese și abdomen, cu manevre rapide de frământare și ciupire, combinate cu aparatură de vacuum. Scopul este stimularea circulației și a drenajului în zonele lucrate. Se lucrează cel mai bine în serie, nu într-o singură ședință, așa că îți spunem sincer la ce să te aștepți.</p>
+          <ul>
+            <li><b>Ideal dacă</b> vrei să lucrezi constant pe zonele cu celulită.</li>
+            <li><b>Cuprinde:</b> coapse, fese, abdomen, brațe la cerere.</li>
+            <li><b>Recomandare:</b> o serie de 8 până la 10 ședințe, de 2 ori pe săptămână.</li>
+            <li><b>Presiune:</b> intensă. Pot apărea roșeți temporare, e normal.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/masaj-anticelulitic/" class="mini-cta" style="margin-left:6px">Masaj anticelulitic în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj pentru Gravide</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Realizat de o specialistă în masajul prenatal. Bine ați venit!</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Ședință blândă, făcută de o colegă specializată în masaj prenatal. Poziționarea este pe o parte, cu perne de sprijin, niciodată pe burtă. Se lucrează lent pe zona lombară, șolduri, picioare și umeri, zonele care duc cel mai mult greutatea în sarcină.</p>
+          <ul>
+            <li><b>Ideal dacă</b> ai dureri de spate, picioare umflate sau tensiune în șolduri.</li>
+            <li><b>Cuprinde:</b> lombar, șolduri, picioare, umeri și ceafă.</li>
+            <li><b>Te rugăm</b> să ne spui la programare în ce săptămână ești și dacă medicul ți-a dat vreo recomandare.</li>
+            <li><b>Presiune:</b> blândă, adaptată sarcinii.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/masaj-pentru-gravide/" class="mini-cta" style="margin-left:6px">Masaj pentru gravide în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj Sportiv Profund</h3>
+          <div class="price">250 lei / 60 min</div>
+          <p>Pentru sportivi și recuperare musculară intensă.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Masaj profund pe grupele musculare solicitate de antrenament. Terapeutul folosește presiune susținută, lucru transversal pe fibră și întinderi asistate, ca să reducă rigiditatea de după efort și să îți redea amplitudinea de mișcare. Spune-i ce sport faci și ce te doare, iar ședința se construiește în jurul acelei zone.</p>
+          <ul>
+            <li><b>Ideal dacă</b> alergi, ridici greutăți, joci fotbal sau te pregătești de o cursă.</li>
+            <li><b>Cuprinde:</b> picioare, spate, umeri, plus zona pe care o indici tu.</li>
+            <li><b>Bun de știut:</b> cu 2 zile înainte de competiție facem o variantă mai ușoară.</li>
+            <li><b>Presiune:</b> profundă.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/masaj-sportiv/" class="mini-cta" style="margin-left:6px">Masaj sportiv în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Deep Relaxing</h3>
+          <div class="price">225 lei / 70 min</div>
+          <p>Relaxare profundă + 3 feluri de pietre calde + reflexoterapie și uleiuri speciale.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Versiunea lungă a masajului de relaxare, cu 10 minute în plus și cu trei tipuri de pietre calde folosite pe rând: bazalt pe spate, pietre mici între degete și pietre plate pe zonele care cer căldură. Se încheie cu reflexoterapie pe tălpi, ca să cobori complet din cap în corp.</p>
+          <ul>
+            <li><b>Ideal dacă</b> o oră ți se pare prea scurtă și vrei să te deconectezi de tot.</li>
+            <li><b>Cuprinde:</b> corp întreg, terapie cu pietre calde, reflexoterapie plantară.</li>
+            <li><b>Include:</b> 3 feluri de pietre calde și uleiuri speciale.</li>
+            <li><b>Presiune:</b> blândă spre medie.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Supreme: Pachet Renaștere</h3>
+          <div class="price">300 lei / 90 min</div>
+          <p>Relaxare + terapie profundă + 3 feluri de pietre calde + terapie pentru sistemul imunitar.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Ședința noastră completă, de o oră și jumătate. Începe cu relaxare pe corp întreg, continuă cu lucru terapeutic profund pe zonele încordate și se încheie cu partea de imunitate: manevre lente de drenaj de-a lungul gâtului, axilelor și abdomenului, plus pietre calde pe zona sternului. Ieși de aici altfel decât ai intrat, de aceea îi spunem Renaștere.</p>
+          <ul>
+            <li><b>Ideal dacă</b> ești epuizat, te-ai întors dintr-o perioadă grea sau vrei un cadou pe care să îl ții minte.</li>
+            <li><b>Cuprinde:</b> relaxare corp întreg, terapie profundă, manevre de drenaj, pietre calde.</li>
+            <li><b>Include:</b> 3 feluri de pietre calde și uleiuri speciale.</li>
+            <li><b>Presiune:</b> variabilă, de la blândă la profundă, în funcție de etapă.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Supreme Power</h3>
+          <div class="price">250 lei / 60 min</div>
+          <p>Masaj extrem de puternic pentru eliberarea completă a tensiunii.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Cel mai puternic masaj de 60 de minute din meniu. Se lucrează cu antebrațul și cu coatele, cu presiune mare și ritm susținut, pe spate, umeri și picioare. Nu este o ședință de adormit, este o ședință de eliberat tot ce s-a strâns. Dacă masajele obișnuite ți se par prea slabe, acesta e al tău.</p>
+          <ul>
+            <li><b>Ideal dacă</b> ai corpul blocat și vrei intensitate maximă.</li>
+            <li><b>Cuprinde:</b> spate, umeri, ceafă, picioare.</li>
+            <li><b>Bun de știut:</b> a doua zi poți simți o ușoară febră musculară, e normală.</li>
+            <li><b>Presiune:</b> foarte puternică.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj Beduin</h3>
+          <div class="price">300 lei / 90 min</div>
+          <p>O tehnică deosebită cu 6 stiluri diferite într-o singură ședință. Vei fi ca o persoană nouă.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Un masaj de 90 de minute în care se trece prin șase stiluri diferite, unul după altul, fără pauză: mișcări lungi de încălzire, presiune profundă, lucru pe puncte, întinderi asistate, manevre ritmice și încheiere cu pietre calde. Este ceva ce nu găsești în altă parte din Brașov și e alegerea clienților care le-au încercat deja pe toate celelalte.</p>
+          <ul>
+            <li><b>Ideal dacă</b> ai încercat tot și vrei o experiență nouă.</li>
+            <li><b>Cuprinde:</b> corp întreg, 6 tehnici într-o singură ședință.</li>
+            <li><b>Durată:</b> 90 de minute, fără grabă.</li>
+            <li><b>Presiune:</b> alternează între blândă și profundă.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>7 Chakra <span style="font-weight:400;font-size:.8rem;color:var(--muted)">(doar cu Sara)</span></h3>
+          <div class="price">600 lei / 180 min</div>
+          <p>Doar pentru cine știe… doar pentru cine vrea să afle.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Trei ore, o singură terapeută, Sara. Se lucrează pe rând pe cele șapte centre energetice, de la bază spre creștet, cu uleiuri alese pentru fiecare zonă, pietre calde, respirație ghidată și atingere lentă. Nu este un masaj obișnuit și nu se face pe fugă. Se programează separat, cu o discuție înainte.</p>
+          <ul>
+            <li><b>Ideal dacă</b> treci printr-o perioadă de schimbare și cauți ceva mai profund decât un masaj.</li>
+            <li><b>Cuprinde:</b> lucru pe cele 7 chakre, uleiuri dedicate, pietre calde, respirație ghidată.</li>
+            <li><b>Durată:</b> 180 de minute, doar pe bază de programare cu Sara.</li>
+            <li><b>Bun de știut:</b> locurile sunt limitate, sună din timp.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează cu Sara</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj pentru Cupluri</h3>
+          <div class="price">Doi terapeuți, aceeași cameră</div>
+          <p>Două persoane tratate în același timp, fiecare cu masajul potrivit pentru ea.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Singurul loc din Brașov unde doi terapeuți lucrează simultan, în aceeași cameră. Nu așteptați pe rând: sunteți amândoi pe masă în același timp, fiecare cu tipul de masaj pe care îl vrea. Este cel mai cerut serviciu al nostru și cel mai bun cadou de aniversare.</p>
+          <ul>
+            <li><b>Ideal pentru</b> parteneri, prieteni sau mamă și fiică.</li>
+            <li><b>Cuprinde:</b> fiecare alege relaxare, terapeutic sau sportiv.</li>
+            <li><b>Cadou:</b> disponibil ca voucher personalizat.</li>
+          </ul>
+          <a href="/servicii/masaj-pentru-cupluri/" class="mini-cta">Vezi pagina masajului în cuplu →</a>
+        </div>
+      </details>
+
     </div>
     <p style="text-align:center;margin-top:34px"><a href="tel:+40770692621" class="btn">Rezervă o ședință: 0770 692 621</a></p>
   </div>
@@ -227,6 +535,49 @@
       <h2 class="sec-title">Vouchere pentru masaj</h2>
       <p class="sec-intro" style="margin-bottom:22px">Oferiți bunătatea relaxării. Voucherele pot fi personalizate pentru aniversări, Crăciun sau orice gest de apreciere. Le puteți cumpăra la sediul nostru sau online, cu plată prin Revolut sau transfer bancar.</p>
       <a href="tel:+40770692621" class="btn">Comandă un voucher: 0770 692 621</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="intrebari">
+  <div class="wrap">
+    <div class="eyebrow">Întrebări frecvente</div>
+    <h2 class="sec-title">Ce ne întreabă cel mai des clienții</h2>
+    <p class="sec-intro">Dacă nu găsești răspunsul aici, sună la 0770 692 621 și îți explicăm cu drag.</p>
+    <div class="faq">
+      <details open>
+        <summary>Cât costă un masaj în Brașov la Nefertiti Therapy?</summary>
+        <p>Ședințele individuale de 60 de minute pornesc de la 200 lei. Masajul sportiv profund și Supreme Power costă 250 lei, Deep Relaxing 225 lei pentru 70 de minute, iar pachetele lungi de 90 de minute, Supreme: Pachet Renaștere și Masaj Beduin, costă 300 lei. Ședința de 7 Chakra, de 180 de minute, costă 600 lei. Vezi <a href="/preturi/">lista completă de prețuri</a>.</p>
+      </details>
+      <details>
+        <summary>Trebuie să fac programare sau pot veni direct?</summary>
+        <p>Recomandăm programarea telefonică la <a href="tel:+40770692621">0770 692 621</a>, pentru că lucrăm pe intervale fixe și de multe ori suntem plini. Dacă avem o fereastră liberă în ziua respectivă, te primim și fără programare.</p>
+      </details>
+      <details>
+        <summary>Care sunt orele de program?</summary>
+        <p>Suntem deschiși zilnic între 11:00 și 21:00, inclusiv sâmbăta și duminica. Ultima ședință de 60 de minute începe la ora 20:00.</p>
+      </details>
+      <details>
+        <summary>Unde sunteți și cum ajung la voi?</summary>
+        <p>Ne găsești pe Strada Codrii Cosminului 40, în Brașov. Există loc de parcare pe stradă, în fața clădirii. Harta se vede mai jos, în secțiunea de contact.</p>
+      </details>
+      <details>
+        <summary>Ce masaj să aleg dacă am dureri de spate sau de cervicală?</summary>
+        <p>Masajul terapeutic de 60 de minute este cel potrivit, pentru că se lucrează punctual pe contracturi. Dacă vrei și relaxare pe lângă asta, alege Masajul Combinat. Pentru tensiune veche și blocaje puternice, recomandăm Supreme Power.</p>
+      </details>
+      <details>
+        <summary>Ce metode de plată acceptați?</summary>
+        <p>Acceptăm cash, plată prin Revolut și transfer bancar. Voucherele cadou se pot cumpăra la sediu sau plăti online prin Revolut ori transfer bancar.</p>
+      </details>
+      <details>
+        <summary>Oferiți masaj pentru cupluri?</summary>
+        <p>Da, și este cel mai cerut serviciu al nostru. Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp, fiecare cu tipul de masaj preferat. <a href="/servicii/masaj-pentru-cupluri/">Vezi pagina masajului în cuplu</a>.</p>
+      </details>
+      <details>
+        <summary>Este prima mea ședință de masaj. La ce să mă aștept?</summary>
+        <p>Vino cu 5 minute mai devreme. Terapeutul te întreabă întâi ce te doare și ce presiune preferi, apoi te lasă singur în cameră ca să te pregătești. Pe parcurs poți cere oricând mai multă sau mai puțină presiune. Toate ședințele includ uleiuri naturale, pietre calde și muzică liniștită.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -257,6 +608,16 @@
   <div class="wrap">
     <p style="font-family:Georgia,serif;font-size:1.2rem;color:#e6d5b3;margin-bottom:6px">Nefertiti Therapy</p>
     <p>Masaj profesional în Brașov · Strada Codrii Cosminului 40 · <a href="tel:+40770692621">0770 692 621</a></p>
+    <p style="font-size:.85rem;line-height:2.1;color:#9a8b73;margin-top:12px">
+      <a href="/servicii/masaj-de-relaxare/">Masaj de relaxare</a> &middot;
+      <a href="/servicii/masaj-terapeutic/">Masaj terapeutic</a> &middot;
+      <a href="/servicii/masaj-sportiv/">Masaj sportiv</a> &middot;
+      <a href="/servicii/reflexoterapie/">Reflexoterapie</a> &middot;
+      <a href="/servicii/masaj-anticelulitic/">Masaj anticelulitic</a> &middot;
+      <a href="/servicii/masaj-pentru-gravide/">Masaj pentru gravide</a> &middot;
+      <a href="/servicii/masaj-pentru-cupluri/">Masaj pentru cupluri</a> &middot;
+      <a href="/preturi/">Prețuri</a>
+    </p>
     <p style="margin-top:10px;color:#9a8b73">© <span id="y"></span> Nefertiti Therapy. Toate drepturile rezervate.</p>
   </div>
 </footer>

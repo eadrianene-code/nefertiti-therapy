@@ -49,9 +49,18 @@
   .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 20px;margin-bottom:12px}
   .faq summary{font-weight:600;color:var(--gold-dark);cursor:pointer;padding:14px 0;font-size:1.05rem}
   .faq p{padding-bottom:14px}
+  ol.steps{list-style:none;counter-reset:s;margin:14px 0 22px}
+  ol.steps li{counter-increment:s;position:relative;padding:11px 0 11px 46px;color:#42392e}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:30px;height:30px;border-radius:50%;background:var(--cream);border:1px solid var(--line);color:var(--gold-dark);font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+  .related{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0 8px}
+  .related a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);transition:.2s}
+  .related a:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(70,55,30,.12)}
+  .related b{display:block;color:var(--gold-dark);font-family:Georgia,serif;font-size:1.05rem;font-weight:600}
+  .related span{font-size:.88rem;color:var(--muted)}
   footer{background:#5a4628;color:#e9ddc4;padding:38px 0;text-align:center;font-size:.92rem}
   footer a{color:#fff}
-  @media(max-width:560px){.hero h1{font-size:1.8rem}}
+  .foot-links{font-size:.85rem;line-height:2.1;color:#9a8b73}
+  @media(max-width:560px){.hero h1{font-size:1.8rem}.related{grid-template-columns:1fr}}
 </style>
 
 <script type="application/ld+json">
@@ -60,8 +69,19 @@
   "@type":"Service",
   "serviceType":"Masaj pentru cupluri",
   "provider":{"@type":"DaySpa","name":"Nefertiti Therapy","telephone":"+40770692621","address":{"@type":"PostalAddress","streetAddress":"Strada Codrii Cosminului 40","addressLocality":"Brașov","addressCountry":"RO"}},
-  "areaServed":"Brașov",
+  "areaServed":{"@type":"City","name":"Brașov"},
   "url":"https://masajbrasovnefertiti.com/servicii/masaj-pentru-cupluri/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Acasă","item":"https://masajbrasovnefertiti.com/"},
+    {"@type":"ListItem","position":2,"name":"Servicii","item":"https://masajbrasovnefertiti.com/#servicii"},
+    {"@type":"ListItem","position":3,"name":"Masaj pentru cupluri","item":"https://masajbrasovnefertiti.com/servicii/masaj-pentru-cupluri/"}
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -72,7 +92,9 @@
     {"@type":"Question","name":"Ce înseamnă masajul pentru cupluri la Nefertiti Therapy?","acceptedAnswer":{"@type":"Answer","text":"Doi terapeuți lucrează simultan, în aceeași cameră, astfel încât două persoane să fie tratate în același timp. Fiecare poate alege tipul de masaj potrivit: relaxare, terapeutic sau sportiv."}},
     {"@type":"Question","name":"Pot alege un tip de masaj diferit față de cealaltă persoană?","acceptedAnswer":{"@type":"Answer","text":"Da. Fiecare persoană își alege independent tipul de masaj (relaxare, terapeutic sau sportiv) în aceeași ședință."}},
     {"@type":"Question","name":"Este potrivit pentru o aniversare sau un cadou?","acceptedAnswer":{"@type":"Answer","text":"Absolut. Masajul în cuplu este alegerea ideală pentru aniversări, ocazii speciale sau ca voucher cadou. Voucherele pot fi personalizate."}},
-    {"@type":"Question","name":"Cum mă programez?","acceptedAnswer":{"@type":"Answer","text":"Sunați la 0770 692 621. Suntem deschiși zilnic între 11:00 și 21:00, inclusiv în weekend, pe Strada Codrii Cosminului 40, Brașov."}}
+    {"@type":"Question","name":"Cât costă masajul pentru cupluri în Brașov?","acceptedAnswer":{"@type":"Answer","text":"Prețul depinde de tipul de masaj ales de fiecare persoană. Ședințele de 60 de minute pornesc de la 200 lei de persoană, iar pachetele de 90 de minute ajung la 300 lei."}},
+    {"@type":"Question","name":"Trebuie să fim un cuplu?","acceptedAnswer":{"@type":"Answer","text":"Nu. Vin la noi prieteni, frați, mame împreună cu fiicele lor și colegi. Este o ședință pentru două persoane, în același timp și în aceeași cameră."}},
+    {"@type":"Question","name":"Cum mă programez?","acceptedAnswer":{"@type":"Answer","text":"Sunați la 0770 692 621. Suntem deschiși zilnic între 11:00 și 21:00, inclusiv în weekend, pe Strada Codrii Cosminului 40, Brașov. Pentru masajul în cuplu avem nevoie de doi terapeuți liberi în același interval, așa că este bine să sunați din timp."}}
   ]
 }
 </script>
@@ -107,6 +129,17 @@
     <li><strong>Convenabil pentru două persoane.</strong> Parteneri, prieteni sau membri ai familiei, tratați în același timp.</li>
   </ul>
 
+  <h2>Cum decurge o ședință în doi</h2>
+  <ol class="steps">
+    <li>Sunați și ne spuneți ziua și ora. Avem nevoie de doi terapeuți liberi în același interval, așa că o programare din timp ajută.</li>
+    <li>La sosire, fiecare spune ce fel de masaj vrea și ce presiune preferă. Nu trebuie să alegeți același lucru.</li>
+    <li>Intrați în aceeași cameră, pe două mese așezate una lângă alta. Lumina scade, pornește muzica.</li>
+    <li>Sunteți masați în același timp, fiecare de terapeutul lui, timp de 60 sau 90 de minute, în funcție de ce ați ales.</li>
+  </ol>
+
+  <h2>Cât costă masajul în cuplu</h2>
+  <p>Prețul se calculează în funcție de tipul de masaj pe care îl alege fiecare persoană, pentru că fiecare poate alege altceva. Ședințele individuale pornesc de la 200 lei pentru 60 de minute, iar pachetele de 90 de minute ajung la 300 lei. Vezi <a href="/preturi/">lista completă de prețuri</a> sau sună și îți spunem exact cât iese pentru combinația pe care o vrei.</p>
+
   <div class="callout">
     <h2 style="margin-top:0">Perfect ca și cadou</h2>
     <p>Oferă o ședință pentru două persoane printr-un voucher personalizat, pentru aniversări, Crăciun sau orice ocazie. Plată la sediu, prin Revolut sau transfer bancar.</p>
@@ -118,16 +151,38 @@
     <details open><summary>Ce înseamnă masajul pentru cupluri aici?</summary><p>Doi terapeuți lucrează în același timp, în aceeași cameră, astfel încât amândoi să vă relaxați simultan. Fiecare alege masajul preferat: relaxare, terapeutic sau sportiv.</p></details>
     <details><summary>Pot alege un masaj diferit față de cealaltă persoană?</summary><p>Da, fiecare persoană își alege independent tipul de masaj în cadrul aceleiași ședințe.</p></details>
     <details><summary>Este potrivit pentru o aniversare sau cadou?</summary><p>Absolut. Este alegerea ideală pentru aniversări și ocazii speciale, iar voucherele cadou pot fi personalizate.</p></details>
-    <details><summary>Cum mă programez?</summary><p>Sunați la <a href="tel:+40770692621">0770 692 621</a>. Suntem deschiși zilnic 11:00–21:00, inclusiv weekend, pe Strada Codrii Cosminului 40, Brașov.</p></details>
+    <details><summary>Cât costă masajul pentru cupluri?</summary><p>Prețul depinde de tipul de masaj ales de fiecare persoană. Ședințele de 60 de minute pornesc de la 200 lei de persoană, iar pachetele de 90 de minute ajung la 300 lei. Vezi <a href="/preturi/">lista completă de prețuri</a>.</p></details>
+    <details><summary>Trebuie să fim un cuplu?</summary><p>Nu. Vin la noi prieteni, frați, mame cu fiicele lor și colegi. Este pur și simplu o ședință pentru două persoane, în același timp și în aceeași cameră.</p></details>
+    <details><summary>Cum mă programez?</summary><p>Sunați la <a href="tel:+40770692621">0770 692 621</a>. Suntem deschiși zilnic 11:00–21:00, inclusiv weekend, pe Strada Codrii Cosminului 40, Brașov. Pentru masajul în cuplu avem nevoie de doi terapeuți liberi în același interval, așa că sunați din timp.</p></details>
+  </div>
+
+  <h2>Alte servicii care te-ar putea interesa</h2>
+  <div class="related">
+    <a href="/servicii/masaj-de-relaxare/"><b>Masaj de Relaxare</b><span>200 lei / 60 min. Pentru stres și somn odihnitor.</span></a>
+    <a href="/servicii/masaj-terapeutic/"><b>Masaj Terapeutic</b><span>200 lei / 60 min. Pentru dureri de spate și cervicale.</span></a>
+    <a href="/servicii/masaj-sportiv/"><b>Masaj Sportiv Profund</b><span>250 lei / 60 min. Pentru recuperare după antrenament.</span></a>
+    <a href="/preturi/"><b>Toate prețurile</b><span>Lista completă, fără costuri ascunse.</span></a>
   </div>
 
   <p style="text-align:center;margin-top:34px"><a href="tel:+40770692621" class="btn">📞 Rezervă masajul în cuplu: 0770 692 621</a></p>
-  <p style="text-align:center;margin-top:18px"><a href="/">← Înapoi la toate serviciile</a></p>
+  <p style="text-align:center;margin-top:18px"><a href="/#servicii">← Înapoi la toate serviciile</a></p>
 </article>
 
 <footer>
-  <p style="font-family:Georgia,serif;font-size:1.2rem;color:#e6d5b3;margin-bottom:6px">Nefertiti Therapy</p>
-  <p>Masaj profesional în Brașov · Strada Codrii Cosminului 40 · <a href="tel:+40770692621">0770 692 621</a></p>
+  <div class="wrap">
+    <p style="font-family:Georgia,serif;font-size:1.2rem;color:#e6d5b3;margin-bottom:10px">Nefertiti Therapy</p>
+    <p style="margin-bottom:14px">Masaj profesional în Brașov · Strada Codrii Cosminului 40 · <a href="tel:+40770692621">0770 692 621</a></p>
+    <p class="foot-links">
+      <a href="/servicii/masaj-de-relaxare/">Masaj de relaxare</a> &middot;
+      <a href="/servicii/masaj-terapeutic/">Masaj terapeutic</a> &middot;
+      <a href="/servicii/masaj-sportiv/">Masaj sportiv</a> &middot;
+      <a href="/servicii/reflexoterapie/">Reflexoterapie</a> &middot;
+      <a href="/servicii/masaj-anticelulitic/">Masaj anticelulitic</a> &middot;
+      <a href="/servicii/masaj-pentru-gravide/">Masaj pentru gravide</a> &middot;
+      <a href="/servicii/masaj-pentru-cupluri/">Masaj pentru cupluri</a> &middot;
+      <a href="/preturi/">Prețuri</a>
+    </p>
+  </div>
 </footer>
 </body>
 </html>
