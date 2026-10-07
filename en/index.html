@@ -141,6 +141,9 @@
   footer{background:#5a4628;color:#e9ddc4;padding:40px 0;text-align:center;font-size:.92rem}
   .lang{font-weight:700;font-size:.82rem;border:1px solid var(--line);padding:5px 12px;border-radius:50px;color:var(--gold-dark);margin-left:14px}
   .lang:hover{background:var(--gold-dark);color:#fff}
+  .grid>.card:last-child:nth-child(3n+1){grid-column:2}
+  @media(max-width:860px){.grid>.card:last-child:nth-child(3n+1){grid-column:auto}.grid>.card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 11px)}}
+  @media(max-width:560px){.grid>.card:last-child:nth-child(odd){width:100%}}
   footer a{color:#fff}
 
   @media(max-width:860px){
@@ -444,7 +447,7 @@
     <a href="/en/" class="brand">Nefertiti Therapy<small>Massage Brașov</small></a>
     <nav class="nav-links">
       <a href="#services">Services</a>
-      <a href="#couples">Couples massage</a>
+      <a href="#services">Couples massage</a>
       <a href="#prices">Prices</a>
       <a href="#vouchers">Vouchers</a>
       <a href="#faq">FAQ</a>
@@ -469,20 +472,6 @@
   </div>
 </section>
 
-<section class="couples" id="couples">
-  <div class="wrap couples-inner">
-    <div class="couples-card">
-      <div class="eyebrow" style="text-align:left">Most requested</div>
-      <h2>Couples massage</h2>
-      <p>The only place in Brașov where <strong>two therapists work at the same time, in the same room</strong>. Two people are treated together, each with the massage that suits them: relaxation, therapeutic or sports. Ideal for partners, friends, or a parent and child travelling together.</p>
-      <span class="price-tag">200 lei per person / 60 min</span>
-      <span class="price-tag">Also available as a gift voucher</span>
-      <p><a href="tel:+40770692621" class="btn" style="margin-top:8px">📞 Book a couples massage</a></p>
-    </div>
-    <div class="couples-visual"><span>Two therapists.<br>One room.<br>At the same time.</span></div>
-  </div>
-</section>
-
 <section id="services">
   <div class="wrap">
     <div class="eyebrow">Our services</div>
@@ -490,21 +479,20 @@
     <p class="sec-intro">Every session includes natural oils, hot stones, clean towels and calm music. Tap any massage to see what it includes. Prices are per person, per session.</p>
     <p class="sec-intro" style="margin-top:-28px;font-size:.92rem"><strong>Professional massage only.</strong> We offer relaxation, therapeutic and sports massage and reflexology by trained therapists. We do not offer sexual services of any kind, and such requests are refused.</p>
     <div class="grid">
-
       <details class="card">
         <summary>
-          <h3>Combined Massage</h3>
+          <h3>Therapeutic Massage</h3>
           <div class="price">200 lei / 60 min</div>
-          <p>Relaxation + therapeutic + reflexology, with two kinds of hot stones and 100% natural oils.</p>
+          <p>For muscle, back and neck pain. Targeted work with fast results.</p>
           <span class="more"><span class="lbl-more">See details</span><span class="lbl-less">Hide details</span> <span class="chev">▾</span></span>
         </summary>
         <div class="card-body">
-          <p>Our most chosen massage, because it combines the best parts. The therapist starts with slow relaxation strokes, moves on to the tense areas (neck, shoulders, lower back) and finishes with foot reflexology. Hot stones are used throughout so the muscles let go more easily.</p>
+          <p>This session is about solving a problem. The therapist first asks where it hurts and for how long, then works precisely on knots and trigger points in the neck, shoulders and lower back. It can feel intense at the moment, but the area is much freer afterwards.</p>
           <ul>
-            <li><b>Ideal if</b> you want both relaxation and relief from tension but can't decide.</li>
-            <li><b>Includes:</b> relaxation massage, therapeutic work on painful areas, foot reflexology.</li>
-            <li><b>Extras:</b> two kinds of hot stones and 100% natural oils.</li>
-            <li><b>Pressure:</b> medium, adjusted as you ask.</li>
+            <li><b>Ideal if</b> you have a stiff neck, lower back pain or sit at a desk all day.</li>
+            <li><b>Includes:</b> assessment, work on knots, light stretches at the end.</li>
+            <li><b>Extras:</b> hot stones to warm the muscle before the work.</li>
+            <li><b>Pressure:</b> firm, and we stop whenever you say.</li>
           </ul>
           <a href="tel:+40770692621" class="mini-cta">📞 Book this massage</a>
         </div>
@@ -531,20 +519,20 @@
 
       <details class="card">
         <summary>
-          <h3>Therapeutic Massage</h3>
-          <div class="price">200 lei / 60 min</div>
-          <p>For muscle, back and neck pain. Targeted work with fast results.</p>
+          <h3>Couples Massage</h3>
+          <div class="price">200 lei per person / 60 min</div>
+          <p>Two therapists. One room. At the same time. Two people treated together, each with the massage that suits them.</p>
           <span class="more"><span class="lbl-more">See details</span><span class="lbl-less">Hide details</span> <span class="chev">▾</span></span>
         </summary>
         <div class="card-body">
-          <p>This session is about solving a problem. The therapist first asks where it hurts and for how long, then works precisely on knots and trigger points in the neck, shoulders and lower back. It can feel intense at the moment, but the area is much freer afterwards.</p>
+          <p>The only place in Brașov where two therapists work at the same time, in the same room. No taking turns: you are both on the table together, each with the massage you want: relaxation, therapeutic or sports. It is our most requested service.</p>
           <ul>
-            <li><b>Ideal if</b> you have a stiff neck, lower back pain or sit at a desk all day.</li>
-            <li><b>Includes:</b> assessment, work on knots, light stretches at the end.</li>
-            <li><b>Extras:</b> hot stones to warm the muscle before the work.</li>
-            <li><b>Pressure:</b> firm, and we stop whenever you say.</li>
+            <li><b>Ideal for</b> partners, friends, siblings, or a parent and child travelling together.</li>
+            <li><b>Includes:</b> each person chooses relaxation, therapeutic or sports massage.</li>
+            <li><b>Price:</b> 200 lei per person for relaxation or therapeutic, so 400 lei in total. If one of you chooses something else, only the difference is added.</li>
+            <li><b>Gift:</b> available as a personalised voucher.</li>
           </ul>
-          <a href="tel:+40770692621" class="mini-cta">📞 Book this massage</a>
+          <a href="tel:+40770692621" class="mini-cta">📞 Book a couples massage</a>
         </div>
       </details>
 
@@ -562,6 +550,25 @@
             <li><b>Includes:</b> warm preparation, reflex-point work on the soles, calf massage.</li>
             <li><b>Good to know:</b> the first minutes can feel sensitive, then it becomes pleasant.</li>
             <li><b>Pressure:</b> targeted, adjustable.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Book this massage</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Combined Massage</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Relaxation + therapeutic + reflexology, with two kinds of hot stones and 100% natural oils.</p>
+          <span class="more"><span class="lbl-more">See details</span><span class="lbl-less">Hide details</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Our most chosen massage, because it combines the best parts. The therapist starts with slow relaxation strokes, moves on to the tense areas (neck, shoulders, lower back) and finishes with foot reflexology. Hot stones are used throughout so the muscles let go more easily.</p>
+          <ul>
+            <li><b>Ideal if</b> you want both relaxation and relief from tension but can't decide.</li>
+            <li><b>Includes:</b> relaxation massage, therapeutic work on painful areas, foot reflexology.</li>
+            <li><b>Extras:</b> two kinds of hot stones and 100% natural oils.</li>
+            <li><b>Pressure:</b> medium, adjusted as you ask.</li>
           </ul>
           <a href="tel:+40770692621" class="mini-cta">📞 Book this massage</a>
         </div>

@@ -143,6 +143,9 @@
   footer{background:#5a4628;color:#e9ddc4;padding:40px 0;text-align:center;font-size:.92rem}
   .lang{font-weight:700;font-size:.82rem;border:1px solid var(--line);padding:5px 12px;border-radius:50px;color:var(--gold-dark);margin-left:14px}
   .lang:hover{background:var(--gold-dark);color:#fff}
+  .grid>.card:last-child:nth-child(3n+1){grid-column:2}
+  @media(max-width:860px){.grid>.card:last-child:nth-child(3n+1){grid-column:auto}.grid>.card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 11px)}}
+  @media(max-width:560px){.grid>.card:last-child:nth-child(odd){width:100%}}
   footer a{color:#fff}
 
   @media(max-width:860px){
@@ -259,21 +262,6 @@
   </div>
 </section>
 
-<!-- COUPLES -->
-<section class="couples" id="cuplu">
-  <div class="wrap couples-inner">
-    <div class="couples-card">
-      <div class="eyebrow" style="text-align:left">Cel mai cerut serviciu</div>
-      <h2>Masaj pentru cupluri</h2>
-      <p>Singurul loc din Brașov unde <strong>doi terapeuți lucrează simultan, în aceeași cameră</strong>. Două persoane sunt tratate în același timp, fiecare cu tipul de masaj potrivit pentru ea: relaxare, terapeutic sau sportiv.</p>
-      <span class="price-tag">200 lei de persoană / 60 min</span>
-      <span class="price-tag">Disponibil și ca voucher cadou</span>
-      <p><a href="/servicii/masaj-pentru-cupluri/" class="btn" style="margin-top:8px">Detalii masaj în cuplu →</a></p>
-    </div>
-    <div class="couples-visual"><span>Doi terapeuți.<br>Aceeași cameră.<br>În același timp.</span></div>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section id="servicii">
   <div class="wrap">
@@ -282,23 +270,23 @@
     <p class="sec-intro">Toate ședințele includ uleiuri naturale, pietre calde, prosoape curate și muzică relaxantă. Apasă pe orice serviciu ca să vezi ce cuprinde. Prețuri pentru ședințe individuale.</p>
     <p class="sec-intro" style="margin-top:-28px;font-size:.92rem"><strong>Masaj exclusiv profesional.</strong> Oferim exclusiv masaj de relaxare, masaj terapeutic, masaj sportiv și reflexoterapie, făcute de terapeuți calificați. Nu oferim servicii cu tentă sexuală și refuzăm orice solicitare de acest fel.</p>
     <div class="grid">
-
       <details class="card">
         <summary>
-          <h3>Masaj Combinat</h3>
+          <h3>Masaj Terapeutic</h3>
           <div class="price">200 lei / 60 min</div>
-          <p>Relaxare + terapeutic + reflexoterapie, cu două feluri de pietre calde și uleiuri 100% naturale.</p>
+          <p>Pentru durerile musculare și cervicale. Știm ce trebuie făcut, cu rezultate rapide.</p>
           <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
         </summary>
         <div class="card-body">
-          <p>Cel mai ales masaj din meniul nostru, pentru că le combină pe cele bune. Terapeutul începe cu mișcări lente de relaxare, trece apoi la lucrul pe zonele încordate (gât, umeri, zona lombară) și încheie cu reflexoterapie pe tălpi. Pietrele calde se folosesc pe parcurs, pentru ca mușchii să cedeze mai ușor.</p>
+          <p>Aici nu venim să te adormim, ci să rezolvăm o problemă. Terapeutul te întreabă întâi unde doare și de cât timp, apoi lucrează punctual pe contracturi și pe punctele declanșatoare din zona cervicală, umeri și lombară. Se poate simți intens pe moment, dar zona rămâne mult mai liberă după.</p>
           <ul>
-            <li><b>Ideal dacă</b> vrei și relaxare, și scăpare de tensiune, dar nu știi ce să alegi.</li>
-            <li><b>Cuprinde:</b> masaj de relaxare, lucru terapeutic pe zonele dureroase, reflexoterapie plantară.</li>
-            <li><b>Include:</b> două feluri de pietre calde și uleiuri 100% naturale.</li>
-            <li><b>Presiune:</b> medie, ajustată după cum ceri pe parcurs.</li>
+            <li><b>Ideal dacă</b> ai gâtul înțepenit, dureri lombare sau stai zilnic la birou.</li>
+            <li><b>Cuprinde:</b> evaluarea zonei, lucru pe contracturi, întinderi ușoare la final.</li>
+            <li><b>Include:</b> pietre calde pentru încălzirea mușchiului înainte de lucru.</li>
+            <li><b>Presiune:</b> fermă, dar oprim oricând spui.</li>
           </ul>
           <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
+          <a href="/servicii/masaj-terapeutic/" class="mini-cta" style="margin-left:6px">Masaj terapeutic în Brașov →</a>
         </div>
       </details>
 
@@ -324,21 +312,21 @@
 
       <details class="card">
         <summary>
-          <h3>Masaj Terapeutic</h3>
-          <div class="price">200 lei / 60 min</div>
-          <p>Pentru durerile musculare și cervicale. Știm ce trebuie făcut, cu rezultate rapide.</p>
+          <h3>Masaj pentru Cupluri</h3>
+          <div class="price">200 lei de persoană / 60 min</div>
+          <p>Doi terapeuți. Aceeași cameră. În același timp. Două persoane tratate simultan, fiecare cu masajul potrivit pentru ea.</p>
           <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
         </summary>
         <div class="card-body">
-          <p>Aici nu venim să te adormim, ci să rezolvăm o problemă. Terapeutul te întreabă întâi unde doare și de cât timp, apoi lucrează punctual pe contracturi și pe punctele declanșatoare din zona cervicală, umeri și lombară. Se poate simți intens pe moment, dar zona rămâne mult mai liberă după.</p>
+          <p>Singurul loc din Brașov unde doi terapeuți lucrează simultan, în aceeași cameră. Nu așteptați pe rând: sunteți amândoi pe masă în același timp, fiecare cu tipul de masaj pe care îl vrea: relaxare, terapeutic sau sportiv. Este cel mai cerut serviciu al nostru.</p>
           <ul>
-            <li><b>Ideal dacă</b> ai gâtul înțepenit, dureri lombare sau stai zilnic la birou.</li>
-            <li><b>Cuprinde:</b> evaluarea zonei, lucru pe contracturi, întinderi ușoare la final.</li>
-            <li><b>Include:</b> pietre calde pentru încălzirea mușchiului înainte de lucru.</li>
-            <li><b>Presiune:</b> fermă, dar oprim oricând spui.</li>
+            <li><b>Ideal pentru</b> parteneri, prieteni, frați sau mamă și fiică.</li>
+            <li><b>Cuprinde:</b> fiecare alege relaxare, terapeutic sau sportiv.</li>
+            <li><b>Preț:</b> 200 lei de persoană pentru relaxare sau terapeutic, adică 400 lei în total. Dacă unul alege altceva, se adaugă doar diferența.</li>
+            <li><b>Cadou:</b> disponibil ca voucher personalizat.</li>
           </ul>
-          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
-          <a href="/servicii/masaj-terapeutic/" class="mini-cta" style="margin-left:6px">Masaj terapeutic în Brașov →</a>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează masajul în cuplu</a>
+          <a href="/servicii/masaj-pentru-cupluri/" class="mini-cta" style="margin-left:6px">Masaj pentru cupluri în Brașov →</a>
         </div>
       </details>
 
@@ -359,6 +347,25 @@
           </ul>
           <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
           <a href="/servicii/reflexoterapie/" class="mini-cta" style="margin-left:6px">Reflexoterapie în Brașov →</a>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <h3>Masaj Combinat</h3>
+          <div class="price">200 lei / 60 min</div>
+          <p>Relaxare + terapeutic + reflexoterapie, cu două feluri de pietre calde și uleiuri 100% naturale.</p>
+          <span class="more"><span class="lbl-more">Vezi detalii</span><span class="lbl-less">Ascunde detaliile</span> <span class="chev">▾</span></span>
+        </summary>
+        <div class="card-body">
+          <p>Cel mai ales masaj din meniul nostru, pentru că le combină pe cele bune. Terapeutul începe cu mișcări lente de relaxare, trece apoi la lucrul pe zonele încordate (gât, umeri, zona lombară) și încheie cu reflexoterapie pe tălpi. Pietrele calde se folosesc pe parcurs, pentru ca mușchii să cedeze mai ușor.</p>
+          <ul>
+            <li><b>Ideal dacă</b> vrei și relaxare, și scăpare de tensiune, dar nu știi ce să alegi.</li>
+            <li><b>Cuprinde:</b> masaj de relaxare, lucru terapeutic pe zonele dureroase, reflexoterapie plantară.</li>
+            <li><b>Include:</b> două feluri de pietre calde și uleiuri 100% naturale.</li>
+            <li><b>Presiune:</b> medie, ajustată după cum ceri pe parcurs.</li>
+          </ul>
+          <a href="tel:+40770692621" class="mini-cta">📞 Programează acest masaj</a>
         </div>
       </details>
 
@@ -516,7 +523,6 @@
           <a href="tel:+40770692621" class="mini-cta">📞 Programează această ședință</a>
         </div>
       </details>
-
 
     </div>
     <p style="text-align:center;margin-top:34px"><a href="tel:+40770692621" class="btn">Rezervă o ședință: 0770 692 621</a></p>
