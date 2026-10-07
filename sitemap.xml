@@ -1,57 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://masajbrasovnefertiti.com/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://masajbrasovnefertiti.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masajbrasovnefertiti.com/en/"/>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/masaj-pentru-cupluri/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/masaj-de-relaxare/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/masaj-terapeutic/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/preturi/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/masaj-sportiv/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/reflexoterapie/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/masaj-anticelulitic/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://masajbrasovnefertiti.com/servicii/masaj-pentru-gravide/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://masajbrasovnefertiti.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://masajbrasovnefertiti.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masajbrasovnefertiti.com/en/"/>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
